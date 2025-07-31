@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Blood Availability Map</title>
+  <style>
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">🩸 Live Blood Availability Map</h2>
+<div id="map"></div>
+
+<script>
+  function initMap() {
+    const locations = [
+      {
+        name: "City Hospital",
+        lat: 19.0760,
+        lng: 72.8777,
+        blood: {
+          A_pos: "Available",
+          B_pos: "Low",
+          O_pos: "Medium",
+          AB_neg: "Not Available"
+        },
+        updated: "10 mins ago"
+      },
+      {
+        name: "Red Cross Blood Bank",
+        lat: 18.5204,
+        lng: 73.8567,
+        blood: {
+          A_pos: "Low",
+          O_neg: "Available"
+        },
+        updated: "5 mins ago"
+      }
+    ];
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 6,
+      center: { lat: 19.5, lng: 75.5 }
+    });
+
+    locations.forEach(loc => {
+      const marker = new google.maps.Marker({
+        position: { lat: loc.lat, lng: loc.lng },
+        map: map,
+        title: loc.name
+      });
+
+      const bloodInfo = Object.entries(loc.blood).map(
+        ([group, status]) => `<b>${group}:</b> ${status}`
+      ).join("<br>");
+
+      const infoWindow = new google.maps.InfoWindow({
+        content: `<h3>${loc.name}</h3>
+                  ${bloodInfo}<br>
+                  <small>Updated: ${loc.updated}</small>`
+      });
+
+      marker.addListener("click", () => {
+        infoWindow.open(map, marker);
+      });
+    });
+  }
+</script>
+
+<!-- Google Maps API KEY required -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Camp Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 50px;
+    }
+    .form-container {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    h2 {
+      text-align: center;
+      color: #e74c3c;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      width: 100%;
+      background: #e74c3c;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #c0392b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Blood Donation Camp Registration</h2>
+    <form action="register1.php" method="POST">
+      <label>Organizer Name</label>
+      <input type="text" name="organizer_name" required>
+
+      <label>Camp Name</label>
+      <input type="text" name="camp_name" required>
+
+      <label>Location</label>
+      <input type="text" name="location" required>
+
+      <label>Camp Date</label>
+      <input type="date" name="camp_date" required>
+
+      <label>Contact Number</label>
+      <input type="text" name="contact" required>
+
+      <button type="submit">Register Camp</button>
+      
+
+    </form>
+  </div>
+
+</body>
+</html>

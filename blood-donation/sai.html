@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blood Donation Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: #fefefe;
+      color: #333;
+      background-image: url(background1.webp);
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #f72cc4;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    nav h1 {
+      font-size: 1.8rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav ul li:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Section */
+    .main {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .main h2 {
+      font-size: 2rem;
+      color: #ecfd2a;
+      margin-bottom: 20px;
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .image-box {
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Animations */
+    .slide-in {
+      animation: slide 2s ease forwards;
+    }
+
+    .zoom-in {
+      animation: zoom 2s ease forwards;
+    }
+
+    .fade-in {
+      animation: fade 2s ease forwards;
+    }
+
+    @keyframes slide {
+      from { transform: translateX(-100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes zoom {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .image-gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h2>Join Us in Saving Lives</h2>
+    <p>Every drop counts. Be a hero, donate blood today!</p>
+
+    <div class="image-gallery">
+      <div class="image-box slide-in">
+        <img src="./blood1.jpg" alt="Blood Donation 1" />
+      </div>
+      <div class="image-box zoom-in">
+        <img src="./blood2.png" alt="Blood Donation 2" />
+      </div>
+      <div class="image-box fade-in">
+        <img src="./blood3.png" alt="Blood Donation 3" />
+      </div>
+      <div class="image-box fade-in">
+        <img src="./blood4.jpg" alt="Blood Donation 3" />
+      </div>
+
+      <div class="image-box fade-in">
+        <img src="./blood5.jpg" alt="Blood Donation 3" />
+      </div>
+
+      <div class="image-box fade-in">
+        <img src="./blood6.webp" alt="Blood Donation 3" />
+      </div>
+
+
+      <div class="image-box fade-in">
+        <img src="./blood7.jpg" alt="Blood Donation 3" />
+      </div>
+
+      <div class="image-box fade-in">
+        <img src="./blood8.jpg" alt="Blood Donation 3" />
+      </div>
+
+
+      <div class="image-box fade-in">
+        <img src="./blood9.jpg" alt="Blood Donation 3" />
+      </div>
+
+      <div class="image-box fade-in">
+        <img src="./blood10.png" alt="Blood Donation 3" />
+      </div>
+
+      <div class="image-box fade-in">
+        <img src="./blood3.png" alt="Blood Donation 3" />
+      </div>
+
+
+    </div>
+  </div>
+  <!-- Footer Start -->
+<footer style="background-color: #e60000; color: white; padding: 40px 20px; margin-top: 50px;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; max-width: 1200px; margin: auto;">
+    
+    <!-- About Section -->
+    <div style="flex: 1; min-width: 250px;">
+      <h3 style="margin-bottom: 15px;">About Us</h3>
+      <p style="line-height: 1.6;">
+        We are a dedicated community working to ensure no life is lost due to the lack of blood. Join our mission and become a donor today.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex: 1; min-width: 200px;">
+      <h3 style="margin-bottom: 15px;">Quick Links</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+        <li><a href="#" style="color: white; text-decoration: none;">Donate Blood</a></li>
+        <li><a href="#" style="color: white; text-decoration: none;">Events</a></li>
+        <li><a href="mailto:sainathkadam848@gmail.com" style="color: white; text-decoration: none;">sainathkadam848@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <!-- Gallery Images -->
+    <div style="flex: 1; min-width: 250px;">
+      <h3 style="margin-bottom: 15px;">Gallery</h3>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <img src="./blood1.jpg" alt="Blood Drive" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover;">
+        <img src="./blood10.png" alt="Blood Bag" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover;">
+        <img src="./blood4.jpg" alt="Donors" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover;">
+        <img src="./blood6.webp" alt="Awareness" style="width: 70px; height: 70px; border-radius: 8px; object-fit: cover;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div style="text-align: center; margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px;">
+    <p>&copy; 2025 BloodDonate. All rights reserved.</p>
+    <div style="margin-top: 10px;">
+      <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Facebook</a>
+      <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Instagram</a>
+      <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Twitter</a>
+    </div>
+  </div>
+</footer>
+<!-- Footer End -->
+
+
+</body>
+</html>
